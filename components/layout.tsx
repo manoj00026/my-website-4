@@ -1,19 +1,15 @@
-import Header from './Header'
-import Footer from './Footer'
-import { ReactNode } from 'react'
+import Header from './header';
+import Footer from './footer';
+import { ReactNode } from 'react';
 
-type Props = {
-  children: ReactNode
-}
-
-const Layout = ({ children }: Props) => {
+const Layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div className="flex flex-col min-h-screen">
+    <>
       <Header />
-      <main className="flex-1 px-4 py-8 max-w-6xl mx-auto w-full">{children}</main>
+      <main className="min-h-screen container mx-auto px-4 py-8">{children}</main>
       <Footer />
-    </div>
-  )
-}
+    </>
+  );
+};
 
-export default Layout
+export default Layout;
